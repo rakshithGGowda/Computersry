@@ -21,12 +21,12 @@ const Products = ({ products, onAddToCart }) => {
   }
 
   const Boody = (
-      <div>
-        <h3>{productOpened.id}</h3>
-        <h3>{productOpened.name}</h3>
-        <h3>{productOpened.description}</h3>
+      <dialog open>
+        <Typography gutterBottom variant="h4" component="h2" >{productOpened.name}</Typography >
+        <Typography dangerouslySetInnerHTML={{ __html: productOpened.description }} variant="body2" color="textSecondary" component="p" />
         <button onClick = {closeOverlay} >close</button>
-      </div>
+        <Typography gutterBottom variant="body2" component="span">Sorry for inconvenience, Work yet to be completed</Typography>
+      </dialog>
       )
 
   if (!products.length) return <p>Loading...</p>;
